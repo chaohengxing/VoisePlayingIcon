@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:voisePlayingIconAttr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chx.voiseplayingicon.MainActivity">
+
+    <TextView
+        android:id="@+id/iv_playbar_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/btn_stop"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/play_image" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/iv_playbar_image"
+        android:layout_below="@+id/iv_playbar_image"
+        android:layout_marginTop="20dp"
+        android:text="帧动画实现" />
+
+    <com.chx.voiseplayingicon.VoisePlayingIcon
+        android:id="@+id/voise_playint_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/btn_stop"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="50dp"
+        android:background="#CCCCCC"
+        android:padding="5dp"
+        voisePlayingIconAttr:pointer_color="#FF6565"
+        voisePlayingIconAttr:pointer_num="4"
+        voisePlayingIconAttr:pointer_width="5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/voise_playint_icon"
+        android:layout_below="@+id/voise_playint_icon"
+        android:layout_marginTop="20dp"
+        android:text="自定义view实现" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_start"
+        android:layout_marginTop="14dp"
+        android:text="暂停" />
+</RelativeLayout>
